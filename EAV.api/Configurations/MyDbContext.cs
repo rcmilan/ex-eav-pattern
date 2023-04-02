@@ -8,7 +8,6 @@ namespace EAV.api.Configurations
     {
         public MyDbContext(DbContextOptions options) : base(options)
         {
-            //Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
