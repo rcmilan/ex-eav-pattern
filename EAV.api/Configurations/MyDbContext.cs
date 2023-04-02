@@ -13,7 +13,7 @@ namespace EAV.api.Configurations
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasPostgresEnum<AttributeValueType>();
+            modelBuilder.HasPostgresEnum<CustomAttributeValueType>();
 
             modelBuilder.Entity<CustomEntity>(opt =>
             {

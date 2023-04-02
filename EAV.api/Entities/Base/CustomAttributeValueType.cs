@@ -1,6 +1,6 @@
 ﻿namespace EAV.api.Entities.Base
 {
-    public enum AttributeValueType
+    public enum CustomAttributeValueType
     {
         Text,
         Integer,

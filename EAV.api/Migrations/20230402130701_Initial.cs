@@ -12,7 +12,7 @@ namespace EAV.api.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterDatabase()
-                .Annotation("Npgsql:Enum:attribute_value_type", "text,integer,decimal,boolean,date,custom_object");
+                .Annotation("Npgsql:Enum:custom_attribute_value_type", "text,integer,decimal,boolean,date,custom_object");
 
             migrationBuilder.CreateTable(
                 name: "CustomEntities",
