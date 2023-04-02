@@ -24,7 +24,7 @@ namespace EAV.api.Controllers
         [HttpPost]
         public async Task<IActionResult> Post([FromServices] MyDbContext dbContext)
         {
-            var e = new CustomEntity().Build()
+            var e = new CustomEntity().Build("usuario")
                 .AddAttribute("Name", "Nome do usr")
                 .AddAttribute("BirthDate", DateTime.Now.AddYears(-20))
                 .AddAttribute("Numbers", new int[] { 1, 2, 3, 4 })

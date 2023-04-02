@@ -19,6 +19,8 @@ namespace EAV.api.Configurations
                 opt.ToTable("CustomEntities");
                 opt.HasKey(e => e.Id);
 
+                opt.Property(e => e.Name).IsRequired();
+
                 opt.OwnsMany(e => e.Attributes, a =>
                 {
                     a.WithOwner();

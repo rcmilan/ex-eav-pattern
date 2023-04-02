@@ -6,12 +6,14 @@ namespace EAV.api.Builder
 {
     public static class CustomEntityBuilder
     {
-        public static CustomEntity Build(this CustomEntity entity)
+        public static CustomEntity Build(this CustomEntity entity, string name)
         {
             entity ??= new CustomEntity();
 
-            if(!entity.Active)
+            if (!entity.Active)
                 entity.SwitchActive();
+
+            entity.Name = name;
 
             return entity;
         }
@@ -42,7 +44,6 @@ namespace EAV.api.Builder
             {
                 customAttribute.Values.Add(new CustomValue(valueData));
             }
-
 
             entity.Attributes ??= new List<CustomAttribute>();
 

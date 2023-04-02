@@ -6,7 +6,6 @@ namespace EAV.api.Entities.EAV.ValueObjects
     {
         public CustomValue()
         {
-
         }
 
         public CustomValue(object valueData) : this()
