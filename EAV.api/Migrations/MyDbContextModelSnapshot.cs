@@ -20,7 +20,7 @@ namespace EAV.api.Migrations
                 .HasAnnotation("ProductVersion", "7.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
-            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "custom_attribute_value_type", new[] { "text", "integer", "decimal", "boolean", "date", "custom_object" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "attribute_val_type", new[] { "text", "integer", "decimal", "boolean", "date", "custom_object" });
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
             modelBuilder.Entity("EAV.api.Entities.EAV.CustomEntity", b =>

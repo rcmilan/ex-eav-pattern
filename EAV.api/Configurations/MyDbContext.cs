@@ -8,12 +8,12 @@ namespace EAV.api.Configurations
     {
         public MyDbContext(DbContextOptions options) : base(options)
         {
-            Database.EnsureCreated();
+            //Database.EnsureCreated();
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasPostgresEnum<CustomAttributeValueType>();
+            modelBuilder.HasPostgresEnum<AttributeValType>();
 
             modelBuilder.Entity<CustomEntity>(opt =>
             {

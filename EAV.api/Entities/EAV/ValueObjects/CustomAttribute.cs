@@ -6,6 +6,6 @@ namespace EAV.api.Entities.EAV.ValueObjects
     {
         public string Name { get; init; } = default!;
         public ICollection<CustomValue> Values { get; init; } = default!;
-        public CustomAttributeValueType ValueType { get; init; } = default!;
+        public AttributeValType ValueType { get; init; } = default!;
     }
 }
