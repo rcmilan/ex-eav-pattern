@@ -1,4 +1,5 @@
 ﻿using EAV.api.Entities.Base;
+using EAV.api.Entities.EAV.ValueObjects;
 
 namespace EAV.api.Entities.EAV
 {
@@ -6,8 +7,4 @@ namespace EAV.api.Entities.EAV
     {
         public ICollection<CustomAttribute> Attributes { get; set; } = new List<CustomAttribute>();
     }
-
-    public record CustomAttribute(string Name, AttributeValueType ValueType, ICollection<CustomValue> Values);
-
-    public record CustomValue(string ValueData);
 }

@@ -6,6 +6,7 @@
         Integer,
         Decimal,
         Boolean,
-        Date
+        Date,
+        CustomObject
     }
 }

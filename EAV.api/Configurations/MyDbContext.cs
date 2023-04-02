@@ -22,19 +22,23 @@ namespace EAV.api.Configurations
 
                 opt.OwnsMany(e => e.Attributes, a =>
                 {
-                    a.WithOwner().HasForeignKey("EntityId");
-                    a.HasIndex("EntityId");
+                    a.WithOwner();
+
                     a.ToTable("CustomAttributes");
                     a.Property<Guid>("Id");
+                    a.HasKey("Id");
+
                     a.Property(a => a.Name).IsRequired();
                     a.Property(a => a.ValueType).IsRequired().HasConversion<string>();
 
                     a.OwnsMany(a => a.Values, v =>
                     {
-                        v.WithOwner().HasForeignKey("AttributeId");
-                        v.HasIndex("AttributeId");
+                        v.WithOwner();
+
                         v.ToTable("CustomValues");
                         v.Property<Guid>("Id");
+                        v.HasKey("Id");
+
                         v.Property(v => v.ValueData).IsRequired();
                     });
                 });
